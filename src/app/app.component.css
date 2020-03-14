@@ -8,3 +8,18 @@
     border: 1px solid red;
     padding: 10px;
 }
+
+h1{
+    text-align: center;
+    margin-top: 5px;
+    
+}
+
+.align-text{
+    text-align: justify;
+    font-size: 17px;
+}
+
+.top{
+    margin-top: 15px;
+}
