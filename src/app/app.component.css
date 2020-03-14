@@ -1,0 +1,11 @@
+.nav{
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+.drop-down-menu{
+    background-color: white;
+    color: green;
+    border: 1px solid red;
+    padding: 10px;
+}
