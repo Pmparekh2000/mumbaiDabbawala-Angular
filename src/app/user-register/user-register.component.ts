@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormControl, FormGroup } from '@angular/forms';
+ 
 @Component({
   selector: 'app-user-register',
   templateUrl: './user-register.component.html',
@@ -11,5 +12,10 @@ export class UserRegisterComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl('')
+  });
 
 }
