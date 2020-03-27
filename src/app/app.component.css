@@ -29,3 +29,12 @@ h1{
 .top{
     margin-top: 15px;
 }
+
+.just{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.backcolor{
+    background-color: aliceblue;
+}
