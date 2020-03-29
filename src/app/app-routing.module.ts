@@ -1,3 +1,4 @@
+import { DigitalDabbawalaComponent } from './digital-dabbawala/digital-dabbawala.component';
 import { TedTalksComponent } from './ted-talks/ted-talks.component';
 import { DabbaServiceComponent } from './dabba-service/dabba-service.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'about-us', component:AboutUsComponent},
   {path: 'dabba-service', component:DabbaServiceComponent},
-  {path: 'ted-talks', component:TedTalksComponent}
+  {path: 'ted-talks', component:TedTalksComponent},
+  {path: 'digital-dabbawala', component:DigitalDabbawalaComponent}
 ];
 
 @NgModule({
@@ -26,4 +28,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [DabbawalaLoginComponent, DabbawalaRegisterComponent, UserLoginComponent, UserRegisterComponent, HomeComponent,
-   AboutUsComponent, DabbaServiceComponent, TedTalksComponent];
+   AboutUsComponent, DabbaServiceComponent, TedTalksComponent, DigitalDabbawalaComponent];
