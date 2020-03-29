@@ -1,3 +1,4 @@
+import { TedTalksComponent } from './ted-talks/ted-talks.component';
 import { DabbaServiceComponent } from './dabba-service/dabba-service.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'user-register',component: UserRegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'about-us', component:AboutUsComponent},
-  {path: 'dabba-service', component:DabbaServiceComponent}
+  {path: 'dabba-service', component:DabbaServiceComponent},
+  {path: 'ted-talks', component:TedTalksComponent}
 ];
 
 @NgModule({
@@ -23,4 +25,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [DabbawalaLoginComponent, DabbawalaRegisterComponent, UserLoginComponent, UserRegisterComponent, HomeComponent, AboutUsComponent, DabbaServiceComponent];
+export const routingComponents = [DabbawalaLoginComponent, DabbawalaRegisterComponent, UserLoginComponent, UserRegisterComponent, HomeComponent,
+   AboutUsComponent, DabbaServiceComponent, TedTalksComponent];
