@@ -1,0 +1,46 @@
+1] Navigation Bar ::
+	Home, About US , Our Services , Training Hires and Jobs Apllication, Our Work, Contact Us, Donate Now, Login Dabbavala, Login/Register Offices/Home/Service Provider.
+
+** The animation Splash Screen
+HOME Page Component: 
+	DABAWALA Design for background Eye catching backgroud and animation. 
+	Welcome IntroDuction
+	Our Services
+	Our PortFolio
+	Transformational FrameWork
+	Our Clients
+	Donation
+	Recognition and Partners
+	Image Gallery
+	Footer
+
+About Us Component:
+	An Eye Catching Backgroud.
+	The Creator of the mmumbai Dabbavala group
+	team Member Data
+	Footer
+OUR SERVICES: 
+	Dabba Service:
+		An Eye Catching Backgroud.
+		Some Information of the Dabbavala
+		Inquiry::
+			Enters data to the Database about ::(name, email, Contact number, Subject, Pick point, Drop Point)
+	Digital Dabbavala
+		An Eye Catching Backgroud.
+		Some Information of the Dabbavala
+		Process Steps.
+		Inquiry::
+			Enters data to the Database about ::(name, email, Contact number, Subject, Pick point, Drop Point)
+	A Day with Dabbavala:
+		An Eye Catching Backgroud.
+		Soome info and Details of the Workshop.
+		Inquiry::
+			Enters data to the Database about ::(name, email, Contact number, Subject, Pick point, Drop Point)
+Our Work: 
+	Redirect to page Home to Our Clients
+ Contact Us:
+	An Eye Catching Backgroud.
+	Enters data to the Database about ::(name, email, Contact number, Subject, Pick point, Drop Point) 
+	Our Information ABout the Address and Phone number and Emails.
+	Maps location.
+	Footer.
