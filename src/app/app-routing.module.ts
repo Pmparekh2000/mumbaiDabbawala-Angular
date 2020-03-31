@@ -11,8 +11,10 @@ import { DabbawalaRegisterComponent } from './dabbawala-register/dabbawala-regis
 import { DabbawalaLoginComponent } from './dabbawala-login/dabbawala-login.component';
 import { NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
+  {path: '', redirectTo:'/home', pathMatch:'full'},
   {path: 'dabbawala-login',component: DabbawalaLoginComponent},
   {path: 'dabbawala-register',component: DabbawalaRegisterComponent},
   {path: 'user-login',component: UserLoginComponent},
@@ -23,7 +25,8 @@ const routes: Routes = [
   {path: 'ted-talks', component:TedTalksComponent},
   {path: 'digital-dabbawala', component:DigitalDabbawalaComponent},
   {path: 'certificates', component:CertificatesComponent},
-  {path: 'images-and-videos', component:ImagesAndVideosComponent}
+  {path: 'images-and-videos', component:ImagesAndVideosComponent},
+  {path: '**',component:PageNotFoundComponent}// This pagenot found has to be at the last of the list of path as the compnents are read sequencially
 ];
 
 @NgModule({
@@ -32,4 +35,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [DabbawalaLoginComponent, DabbawalaRegisterComponent, UserLoginComponent, UserRegisterComponent, HomeComponent,
-   AboutUsComponent, DabbaServiceComponent, TedTalksComponent, DigitalDabbawalaComponent, CertificatesComponent, ImagesAndVideosComponent];
+   AboutUsComponent, DabbaServiceComponent, TedTalksComponent, DigitalDabbawalaComponent, CertificatesComponent, ImagesAndVideosComponent,PageNotFoundComponent];

@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DonateComponent } from './donate/donate.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -12,6 +15,9 @@ import { DonateComponent } from './donate/donate.component';
     AppComponent,
     routingComponents,
     DonateComponent,
+    PageNotFoundComponent,
+    NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
