@@ -1,163 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website for the mumbai Tiffinvalas">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website for the mumbai Tiffinvalas">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  
 </head>
 <body>
-    <div  class="container">
-        <div class="row top">
-          <div class="col-sm align-text">
-            <img src="../assets/logo_dabbawala.png" class="img-thumbnail" style="width: 250px; height: 70px;">
+  <!-- <div  class="container">
+    <div class="row top">
+      <div class="col-sm align-text">
+        <img src="../assets/logo_dabbawala.png" class="img-thumbnail" style="width: 250px; height: 70px;">
+      </div>
+      <div class="col-sm">
+        Phone no - +91 98704 19916 
+      </div>
+      <div class="col-sm">
+        Email - info@mumbaidabbawala.in
+      </div>
+    </div>
+  </div> -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-brand"><i>Mumbai Tiffinvala</i></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active nav">
+          <a class="nav-link" routerLink="/home"><strong>Home</strong><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active nav">
+          <a class="nav-link" routerLink="/about-us"><strong>About Us</strong><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active dropdown nav">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <strong>Our Services</strong>
+          </a>
+          <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item animated zoomIn" routerLink = "dabba-service"><strong>Dabba Service</strong></a>
+            <a class="dropdown-item animated zoomIn" routerLink = "ted-talks"><strong>Lectures/Seminars and Ted Talks</strong></a>
+            <a class="dropdown-item animated zoomIn" routerLink = "digital-dabbawala"><strong>Digital Dabbawala</strong></a>
+            <a class="dropdown-item animated zoomIn" href="#"><strong>Advertise with us</strong></a>
+            <a class="dropdown-item animated zoomIn" href="#"><strong>Centralised Kitchen</strong></a>
           </div>
-          <div class="col-sm">
-            Phone no - +91 98704 19916 
+        </li>
+        <li class="nav-item active nav">
+          <a class="nav-link" href="#"><strong>Our Work</strong><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active dropdown nav">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <strong>Transformational</strong>
+          </a>
+          <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item animated zoomIn" href="#"><strong>Graduate Hires</strong></a>
+            <a class="dropdown-item animated zoomIn" routerLink = "certificates"><strong>Certification and Licensing</strong></a>
+            <a class="dropdown-item animated zoomIn" href="#"><strong>Start up initiation</strong></a>
+            <a class="dropdown-item animated zoomIn" href="#"><strong>Training</strong></a>
           </div>
-          <div class="col-sm">
-            Email - info@mumbaidabbawala.in
+        </li>
+        <li class="nav-item active dropdown nav">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <strong>Media</strong>
+          </a>
+          <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item animated zoomIn" routerLink="images-and-videos"><strong>Image and Video Gallery</strong></a>
           </div>
+        </li>
+        <li class="nav-item active nav">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal" data-toggle="modal" data-target="#exampleModal"><strong>Donate Us</strong><span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <li class="nav-item active dropdown nav">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <strong>Login and Registeration</strong>
+        </a>
+        <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item animated zoomIn" routerLink="/user-login"><strong>User Login</strong></a>
+          <a class="dropdown-item animated zoomIn" routerLink="/user-register"><strong>User Register</strong></a>
+          <a class="dropdown-item animated zoomIn" routerLink="/dabbawala-login"><strong>Dabbawala Login</strong></a>
+          <a class="dropdown-item animated zoomIn" routerLink="/dabbawala-register"><strong>Dabbawala Register</strong></a>
+        </div>
+      </li>
+    </div>
+  </nav>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Donate Us On</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group col-lg-12">
+              <label class="label002" style="color: black;">
+                Bank Name:
+                <b>Dena Bank</b>
+              </label>
+            </div>
+            <div class="form-group col-lg-12">
+              <label class="label002" style="color: black;">
+                Account Name:
+                <b>Nutan Mumbai Tiffin Box Suppliers Charity Trust</b>
+              </label>
+            </div>
+            <div class="form-group col-lg-12">
+              <label class="label002" style="color: black;">
+                Account Number:
+                <b>001010001442</b>
+              </label>
+            </div>
+            <div class="form-group col-lg-12">
+              <label class="label002" style="color: black;">
+                IFSC Code:
+                <b>BKDN0450010</b>
+              </label>
+            </div>
+            <div class="form-group col-lg-12">
+              <label class="label002" style="color: black;">
+                MICR Code :
+                <b>400018028</b>
+              </label>
+            </div>
+            <div class="form-group col-lg-12">
+              <label class="label002" style="color: black;">
+                Pan Card No :
+                <b>AABTN2128P</b>
+              </label>
+            </div>
+            <hr>
+            <div class="form-group col-lg-12">
+              <label class="label002" style="color: black;">
+                Donate on Paytm on:
+                <b>xxxxxxxxxx</b>
+              </label>
+            </div>
+            <div class="form-group col-lg-12">
+              <label class="label002" style="color: black;">
+                Donate on Google Pay on:
+                <b>yyyyyyyyy</b>
+              </label>
+            </div>
+            <div class="form-group col-lg-12">
+              <label class="label002" style="color: black;">
+                Contact on <b>aaaaaaaaa</b> for more details:
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button> -->
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active nav">
-                  <a class="nav-link" routerLink="/home"><strong>Home</strong><span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active nav">
-                  <a class="nav-link" routerLink="/about-us"><strong>About Us</strong><span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active dropdown nav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <strong>Our Services</strong>
-                  </a>
-                  <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item animated zoomIn" routerLink = "dabba-service"><strong>Dabba Service</strong></a>
-                    <a class="dropdown-item animated zoomIn" routerLink = "ted-talks"><strong>Lectures/Seminars and Ted Talks</strong></a>
-                    <a class="dropdown-item animated zoomIn" routerLink = "digital-dabbawala"><strong>Digital Dabbawala</strong></a>
-                    <a class="dropdown-item animated zoomIn" href="#"><strong>Advertise with us</strong></a>
-                    <a class="dropdown-item animated zoomIn" href="#"><strong>Centralised Kitchen</strong></a>
-                  </div>
-                </li>
-                <li class="nav-item active nav">
-                  <a class="nav-link" href="#"><strong>Our Work</strong><span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active dropdown nav">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <strong>Transformational</strong>
-                    </a>
-                    <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item animated zoomIn" href="#"><strong>Graduate Hires</strong></a>
-                      <a class="dropdown-item animated zoomIn" routerLink = "certificates"><strong>Certification and Licensing</strong></a>
-                      <a class="dropdown-item animated zoomIn" href="#"><strong>Start up initiation</strong></a>
-                      <a class="dropdown-item animated zoomIn" href="#"><strong>Training</strong></a>
-                    </div>
-                </li>
-                <li class="nav-item active dropdown nav">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <strong>Media</strong>
-                    </a>
-                    <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item animated zoomIn" routerLink="images-and-videos"><strong>Image and Video Gallery</strong></a>
-                    </div>
-                </li>
-                <li class="nav-item active nav">
-                    <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal" data-toggle="modal" data-target="#exampleModal"><strong>Donate Us</strong><span class="sr-only">(current)</span></a>
-                </li>
-              </ul>
-              <li class="nav-item active dropdown nav">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <strong>Login and Registeration</strong>
-                </a>
-                <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item animated zoomIn" routerLink="/user-login"><strong>User Login</strong></a>
-                  <a class="dropdown-item animated zoomIn" routerLink="/user-register"><strong>User Register</strong></a>
-                  <a class="dropdown-item animated zoomIn" routerLink="/dabbawala-login"><strong>Dabbawala Login</strong></a>
-                  <a class="dropdown-item animated zoomIn" routerLink="/dabbawala-register"><strong>Dabbawala Register</strong></a>
-                </div>
-              </li>
-            </div>
-        </nav>
-        <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Donate Us On</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-group col-lg-12">
-                  <label class="label002" style="color: black;">
-                    Bank Name:
-                    <b>Dena Bank</b>
-                  </label>
-                </div>
-                <div class="form-group col-lg-12">
-                  <label class="label002" style="color: black;">
-                    Account Name:
-                    <b>Nutan Mumbai Tiffin Box Suppliers Charity Trust</b>
-                  </label>
-                </div>
-                <div class="form-group col-lg-12">
-                  <label class="label002" style="color: black;">
-                    Account Number:
-                    <b>001010001442</b>
-                  </label>
-                </div>
-                <div class="form-group col-lg-12">
-                  <label class="label002" style="color: black;">
-                    IFSC Code:
-                    <b>BKDN0450010</b>
-                  </label>
-                </div>
-                <div class="form-group col-lg-12">
-                  <label class="label002" style="color: black;">
-                    MICR Code :
-                    <b>400018028</b>
-                  </label>
-                </div>
-                <div class="form-group col-lg-12">
-                  <label class="label002" style="color: black;">
-                    Pan Card No :
-                    <b>AABTN2128P</b>
-                  </label>
-                </div>
-                <hr>
-                <div class="form-group col-lg-12">
-                  <label class="label002" style="color: black;">
-                    Donate on Paytm on:
-                    <b>xxxxxxxxxx</b>
-                  </label>
-                </div>
-                <div class="form-group col-lg-12">
-                  <label class="label002" style="color: black;">
-                    Donate on Google Pay on:
-                    <b>yyyyyyyyy</b>
-                  </label>
-                </div>
-                <div class="form-group col-lg-12">
-                  <label class="label002" style="color: black;">
-                    Contact on <b>aaaaaaaaa</b> for more details:
-                  </label>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
 </body>
 </html>
