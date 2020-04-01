@@ -1,6 +1,9 @@
-.just{
-    text-align: justify;
-    text-justify: inter-word;
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+.IntroPage{
+    padding-block-end: 2rem;
+    height:100%;
+    background-color: rgb(255, 230, 204);
 }
 
 .center {
@@ -9,3 +12,62 @@
     margin-right: auto;
     width: 50%;
 }
+.IntroPage h3, .services h3{
+    text-align: center;
+    font-size: xxx-large;
+    font-family: 'Spicy Rice', cursive;
+    padding-bottom: 2rem;
+}
+
+.logoname{
+    text-align: center;
+    font-family: 'Spicy Rice', cursive;
+    color: crimson;
+    font-size: 1.5rem;
+}
+
+/* 
+.designedbackgroud img{
+    position: relative;
+    padding-top: 4rem;
+    max-width: 100%;
+    max-height: 100%;
+}
+.cloud{
+position: absolute;
+  width:100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,5%);
+}
+.cloud img{
+    max-width: 100%;
+} */
+
+    /* fixing the Carousel for the gif and images  */
+.carousel-caption{
+    transform: translateX(-15%);
+    padding-bottom: 0;
+}
+.carousel-caption .container-fluid{
+    transform: translateY(22%);
+    position: relative;
+    bottom: 0;
+}
+.cloud{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+iframe{
+    height: 380px !important;
+}
+
+/* Our services */
+.just{
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 2.3rem;
+}
+
