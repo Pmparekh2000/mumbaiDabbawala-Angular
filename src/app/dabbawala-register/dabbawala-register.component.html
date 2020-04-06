@@ -1,1 +1,57 @@
-<p>dabbawala-register works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dabbawala-Register (reactive form)</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>Register Form</h2>
+        <form [formGroup] = "registrationForm">
+            <div class="form-group">
+                <label>Addhar Number:</label>
+                <input [class.is-invalid] = "AddNum.invalid && AddNum.touched" type="tel" formControlName="add_no" class="form-control">
+                <!-- <small [class.d-none] = "AddNum.valid || AddNum.untouched" class="text-danger">Please fill the username</small> -->
+                <div *ngIf="AddNum.invalid && AddNum.touched">
+                    <small *ngIf="AddNum.errors?.required" class="text_danger">Addhar number id required</small>
+                    <small *ngIf="AddNum.errors?.minlength" class="text_danger">Name must be atleast three characters long</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Name as on Addhar Card:</label>
+                <input type="text" formControlName="add_name" class="form-control">
+            </div>
+            <div formGroupName="add_name_divi">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" formControlName="fname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Middle Name</label>
+                    <input type="text" formControlName="mname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" formControlName="lname" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" formControlName="add_email" class="form-control">
+            </div>
+            <!-- <div class="form-group">
+                <label>Phone No:</label>
+                <input type="tel" class="form-control">
+            </div>
+            <div class="form-group">
+                <select class="custom-select">
+                    <option selected>I would have food from</option>
+                    <option *ngFor="let choice of choice_of_food">{{ choice }}</option>
+                </select>
+            </div> -->
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

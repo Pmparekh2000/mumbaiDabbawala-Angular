@@ -18,4 +18,5 @@ export class UserRegisterComponent implements OnInit {
     lastName: new FormControl('')
   });
 
+  choice_of_food = ['Home', 'Dabbawala centralised-kichen'];
 }
