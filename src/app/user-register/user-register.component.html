@@ -6,9 +6,156 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>New Users please register here(Template driven form)</h1>
-    <form #userRegister="ngForm">
-        Hello this is Prerak branch
+    <form [formGroup] = "custName">
+        <table>
+            <th>Personal Info</th>
+            <tr>
+                <td>
+                    First Name:
+                    <input id="fname" class="form-control" type="text" formControlName = "fname" required>
+                    <!-- <div *ngIf="fname.invalid && (fname.dirty || fname.touched) class="alert alert-danger">
+                        <div *ngIf="name.errors.required">
+                            Name is invalid
+                        </div>        
+                    </div> -->
+                </td>
+                <label>
+                    Middle Name:
+                    <input type="text" formControlName = "mname">
+                </label>
+                <label>
+                    Last Name:
+                    <input type="text" formControlName = "lname">
+                </label>
+            </tr>
+        </table>
+    </form>
+    <form [formGroup] = "custAddPickUp">
+        <table>
+            <th>Pick-up Address Info:</th>
+            <tr>
+                <td>
+                    <label>
+                        Flat No./Room No.
+                        <input type="text" formControlName = "flat_no">
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        Building Name/Chawl Name:
+                        <input type="text" formControlName = "resi_name">
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        Area:
+                        <input type="text" formControlName = "area">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Landmark:
+                        <input type="text" formControlName = "landmark">
+                    </label>  
+                </td>
+                <td>
+                    <label>
+                        Near by railway Station:
+                        <input type="text" formControlName = "nearby_rly_stat">
+                    </label>
+                </td>
+            </tr>    
+            <tr>
+                <td>
+                    <label>
+                        City:
+                        <input type="text" formControlName = "city">
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        Pincode:
+                        <input type="text" formControlName = "pincode">
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <form [formGroup] = "custAddDrop">
+        <table>
+            <th>Drop-down Address Info:</th>
+            <tr>
+                <td>
+                    <label>
+                        Table No/Cabin No:
+                        <input type="text" formControlName = "table_no">
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        Building Name
+                        <input type="text" formControlName = "build_name">
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        Area:
+                        <input type="text" formControlName = "area">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Landmark:
+                        <input type="text" formControlName = "landmark">
+                    </label>  
+                </td>
+                <td>
+                    <label>
+                        Near by railway Station:
+                        <input type="text" formControlName = "nearby_rly_stat">
+                    </label>
+                </td>
+            </tr>    
+            <tr>
+                <td>
+                    <label>
+                        City:
+                        <input type="text" formControlName = "city">
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        Pincode:
+                        <input type="text" formControlName = "pincode">
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <form [formGroup] = "custCtcNo">
+        <table>
+            <th>Phone number Information:</th>
+            <tr>
+                <td>
+                    <label>
+                        Mobile No1:
+                        <input type="number" formControlName = "mob1">
+                    </label>
+                    <label>
+                        Mobile No2:
+                        <input type="number" formControlName = "mob2">
+                    </label>
+                    <label>
+                        Landline:
+                        <input type="number" formControlName = "landline">
+                    </label>
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>
