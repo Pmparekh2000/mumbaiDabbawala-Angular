@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mumbaiDabbawalas"
+    }
+  },
+  "defaultProject": "mumbaiDabbawalas",
+  "cli": {
+    "analytics": "490c1b1a-1a8c-44df-8b94-fd485e88502a"
+  }
 }
