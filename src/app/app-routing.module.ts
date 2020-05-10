@@ -1,3 +1,4 @@
+import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CentralisedKitchenComponent } from './centralised-kitchen/centralised-kitchen.component';
 import { ImagesAndVideosComponent } from './images-and-videos/images-and-videos.component';
 import { CertificatesComponent } from './certificates/certificates.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'certificates', component:CertificatesComponent},
   {path: 'images-and-videos', component:ImagesAndVideosComponent},
   {path: 'centralised-kitchen', component:CentralisedKitchenComponent},
+  {path: 'fetch-data', component:FetchDataComponent},
   {path: '**',component:PageNotFoundComponent}// This page not found has to be at the last of the list of path as the components are read sequentially
 ];
 
@@ -38,4 +40,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [DabbawalaLoginComponent, DabbawalaRegisterComponent, UserLoginComponent, UserRegisterComponent, HomeComponent,
    AboutUsComponent, DabbaServiceComponent, TedTalksComponent, DigitalDabbawalaComponent, CertificatesComponent, ImagesAndVideosComponent,PageNotFoundComponent,
-  CentralisedKitchenComponent];
+  CentralisedKitchenComponent, FetchDataComponent];

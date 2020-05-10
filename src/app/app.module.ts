@@ -8,6 +8,9 @@ import { DonateComponent } from './donate/donate.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+// import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { HttpClientModule } from '@angular/common/http';
+// import { Pipe } from "@angular/core";
 
 
 @NgModule({
@@ -24,6 +27,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
