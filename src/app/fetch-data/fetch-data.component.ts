@@ -18,7 +18,7 @@ export class FetchDataComponent implements OnInit {
   }
 
   getData(){
-    console.log("Hello");
+    // console.log("Hello");
     
     this.dataService.fetchCust().subscribe(res=>{
       console.log("Posted data fetched", res);

@@ -6,16 +6,19 @@
     <title>Customer Data</title>
 </head>
 <body>
+    <div class="container">
+        <h3>Our happy customers</h3>
+    </div>
     <table>
         <tr *ngIf="custData;">
             <th>CustomerId</th>
-            <th>CustomerId</th>
-            <th>CustomerId</th>
-            <th>CustomerId</th>
-            <th>CustomerId</th>
-            <th>CustomerId</th>
-            <th>CustomerId</th>
-            <th>CustomerId</th>
+            <th>Flat_No</th>
+            <th>Residnece_Name</th>
+            <th>Landmark</th>
+            <th>Nearby_Railway_Station</th>
+            <th>Area</th>
+            <th>City</th>
+            <th>Pincode</th>
         </tr>
         <tr *ngFor="let d of custData;">
             <td>{{d.customer_id}}</td>
