@@ -1,1 +1,84 @@
-<p>user-login works!</p>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4"><strong>Applictaion Form</strong></h1>
+      <p class="lead">This Form is to apply for the servicces given by us</p>
+    </div>
+</div>
+<p>{{applicationform.value | json }}</p>
+<div #UserLoginForm class='container pt-4 pb-4'>
+    <form [formGroup]="applicationform" (ngSubmit)="onSubmit()" #apform="ngForm" novalidate>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="f_name">First name</label>
+            <input type="text" formControlName="f_name" class="form-control" id="f_name" placeholder="Eg Robert" required>            
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="m_name">Father's name</label>
+            <input type="text" formControlName="m_name" class="form-control" id="m_name" placeholder="Eg Robert" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="l_name">Surname</label>
+            <input type="text" formControlName="l_name" class="form-control" id="l_name" placeholder="Eg Downey" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip03">Email Id</label>
+            <input type="text" formControlName="email" class="form-control" id="validationTooltip03" placeholder="eg robert3@gmail.com" required>
+          </div>
+
+          <div class="col-md-1 mb-3">
+            <label for="validationTooltip04">Age</label>
+            <input type="number" formControlName="age" class="form-control" id="validationTooltip04" required>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip05">Phone Number</label>
+            <input type="number" formControlName="phone_number" class="form-control" id="validationTooltip05" placeholder="eg 7977820508" required>
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="inputState">Gender</label>
+            <select formControlName="gender" id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Trans Gender</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="validationTooltip01">Occupation</label>
+              <input type="text" formControlName="occupation" class="form-control" id="validationTooltip01">              
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="validationTooltip02">ZIP code</label>
+              <input type="number" formControlName="pincode" class="form-control" id="validationTooltip02" placeholder="Eg Robert" required>
+            </div>
+  
+            <div class="form-group col-md-4">
+                <label for="inputState">Marital Status</label>
+                <select id="inputState" formControlName="marital_status" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>married</option>
+                  <option>Unmarried</option>
+                  <option>Divorced</option>
+                  <option>Widow</option>
+                </select>
+              </div>
+          </div>
+
+          <div class="form-row">
+              <div class="form-group col-12">
+                  <label for="">Address for the Delivery</label>
+                  <input class="form-control" formControlName="address" type="text" name="address" id="address">
+              </div>
+          </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </form>
+</div>
