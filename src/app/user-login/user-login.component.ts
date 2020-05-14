@@ -68,8 +68,8 @@ export class UserLoginComponent implements OnInit {
     },
     'pincode':{
       'required' : 'Pincode is Required',
-      'min': "Pincode must be of 6 digits",
-      'max': "Pincode must be of 6 digits"
+      'minlength': "Pincode must be of 6 digits",
+      'maxlength': "Pincode must be of 6 digits"
     },
     'phone_number':{
       'required' : 'Contact Number is Required',
@@ -98,7 +98,7 @@ export class UserLoginComponent implements OnInit {
       marital_status:['',Validators.required],
       gender:['',Validators.required],
       address:['', [Validators.required,Validators.minLength(10), Validators.maxLength(199)]],
-      pincode:[,[Validators.required,,Validators.min(100000),Validators.max(999999)]],
+      pincode:[,[Validators.required,,Validators.minLength(6),Validators.maxLength(6)]],
       phone_number:[,[Validators.required,Validators.min(1000000000),Validators.max(9999999999)]],
       Present_member:false 
     });
@@ -151,7 +151,7 @@ onSubmit(){
       marital_status:'',
       gender:'',
       address:'',
-      pincode:0,
+      pincode:'',
       phone_number:0,
       Present_member:0
   });

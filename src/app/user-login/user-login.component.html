@@ -61,8 +61,7 @@
           <div class="form-group col-md-3">
             <label for="inputState">Gender</label>
             <select formControlName="gender" id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>Male</option>
+              <option selected>Male</option>
               <option>Female</option>
               <option>Trans Gender</option>
             </select>
@@ -81,7 +80,7 @@
 
             <div class="col-md-4 mb-3">
               <label for="validationTooltip02">ZIP code</label>
-              <input type="number" [ngClass]="{ 'is-invalid' : formErrors.pincode !== ''}" formControlName="pincode" class="form-control" id="validationTooltip02" placeholder="Eg Robert" required>
+              <input type="text" [ngClass]="{ 'is-invalid' : formErrors.pincode !== ''}" formControlName="pincode" class="form-control" id="validationTooltip02" required>
               <div class="invalid-feedback">
                 {{formErrors.pincode}}
             </div>
@@ -90,9 +89,8 @@
             <div class="form-group col-md-4">
                 <label for="inputState">Marital Status</label>
                 <select id="inputState"  formControlName="marital_status" class="form-control">
-                  <option selected>Choose...</option>
                   <option>married</option>
-                  <option>Unmarried</option>
+                  <option selected>Unmarried</option>
                   <option>Divorced</option>
                   <option>Widow</option>
                 </select>

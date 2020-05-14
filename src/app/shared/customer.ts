@@ -11,4 +11,4 @@ export class Customer{
     pincode:number;
     phone_number:number;
     Present_member:number;
-};
+};  
