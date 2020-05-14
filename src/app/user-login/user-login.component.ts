@@ -13,36 +13,71 @@ export class UserLoginComponent implements OnInit {
   applicationform: FormGroup;
   errMsg: string;
   formErrors= {
-    // 'firstname':'',
-    // 'lastname': '',
-    // 'telnum': '',
-    // 'email':''
+    'f_name':'',
+    'l_name': '',
+    'm_name': '',
+    'email':'',
+    'age':'',
+    'occupation':'',
+    'marital_status':'',
+    'gender':'',
+    'address':'',
+    'pincode':'',
+    'phone_number':''
   }
  
   validationMessages = {
-    // 'firstname': {
-    //   'required':      'First Name is required.',
-    //   'minlength':     'First Name must be at least 2 characters long.',
-    //   'maxlength':     'First Name cannot be more than 25 characters long.',
-    //   'whitespace':    'Whitespaces are not allowed'
-    // },
-    // 'lastname': {
-    //   'required':      'Last Name is required.',
-    //   'minlength':     'Last Name must be at least 2 characters long.',
-    //   'maxlength':     'Last Name cannot be more than 25 characters long.',
-    //   'whitespace':    'Whitespaces are not allowed'
-    // },
-    // 'telnum': {
-    //   'required':      'Tel. number is required.',
-    //   'pattern':       'Tel. number must contain only numbers.',
-    //   'whitespace':    'Whitespaces are not allowed'
-    // },
-    // 'email': {
-    //   'required':      'Email is required.',
-    //   'email':         'Email not in valid format.',
-    //   'whitespace':    'Whitespaces are not allowed'
-    // },
+    'f_name': {
+      'required':      'First Name is required.',
+      'minlength':     'First Name must be at least 2 characters long.',
+      'maxlength':     'First Name cannot be more than 20 characters long.'
+    },
+    'l_name': {
+      'required':      'Last Name is required.',
+      'minlength':     'Last Name must be at least 2 characters long.',
+      'maxlength':     'Last Name cannot be more than 20 characters long.'
+    },
+    'm_name': {
+      'required':      "Father's Name is required.",
+      'minlength':     "Father's Name must be at least 2 characters long.",
+      'maxlength':     "Father's Name cannot be more than 20 characters long."
+    },
+    'email': {
+      'required':      'Email is required.',
+      'maxlength':     'Last Name cannot be more than 199 characters long.',
+      'email':         'Email not in valid format.'
+    },
+    'age': {
+      'required' : 'Age is required.',
+      'min' : 'Age must be at least 5 yeras old.',
+      'max' : 'Age cannot be more than 100 years old .'
+    },
+    'occupation':{
+      'maxlength': 'Occupation cannot be more than 99 characters long.'
+    },
+    'marital_status':{
+      'required' : 'Marital Status is Required'
+    },
+    'gender':{
+      'required' : 'Gender is Required'
+    },
+    'address':{
+      'required' : 'Address is Required',
+      'minlength': "Address must be at least 10 characters long.",
+      'maxlength': "Address cannot be more than 200 characters long."
+    },
+    'pincode':{
+      'required' : 'Pincode is Required',
+      'min': "Pincode must be of 6 digits",
+      'max': "Pincode must be of 6 digits"
+    },
+    'phone_number':{
+      'required' : 'Contact Number is Required',
+      'min': 'Invalid Phone Number',
+      'max': 'Invalid Phone Number'
+    }
   };
+
   @ViewChild('apform',{static:false}) applicationformDirective;
 
   constructor(private fb: FormBuilder,
@@ -54,19 +89,18 @@ export class UserLoginComponent implements OnInit {
 
   createForm(){
     this.applicationform = this.fb.group({
-      f_name: ['',[ Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
-      l_name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
-      m_name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
-      email: ['',[Validators.required, Validators.email]],
-      age: [,[Validators.required]],
-      occupation:['',Validators.required],
+      f_name: ['',[ Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
+      l_name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
+      m_name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
+      email: ['',[Validators.required,Validators.maxLength(199), Validators.email]],
+      age: [,[Validators.required,Validators.min(5),Validators.max(100)]],
+      occupation:['',Validators.maxLength(99)],
       marital_status:['',Validators.required],
-      gender:['',],
-      address:['', Validators.required],
-      pincode:[, Validators.required],
-      phone_number:[,[Validators.required]],
-      Present_member:0
-      
+      gender:['',Validators.required],
+      address:['', [Validators.required,Validators.minLength(10), Validators.maxLength(199)]],
+      pincode:[,[Validators.required,,Validators.min(100000),Validators.max(999999)]],
+      phone_number:[,[Validators.required,Validators.min(1000000000),Validators.max(9999999999)]],
+      Present_member:false 
     });
       this.customer = this.applicationform.value;
       this.applicationform.valueChanges.subscribe(data => this.onValueChanged());
@@ -93,29 +127,34 @@ onValueChanged(data?: any) {
   }
 }
 
-
 onSubmit(){
+
   this.customer = this.applicationform.value;
+  this.customer.Present_member = this.customer.Present_member ? 1 : 0;
   this.loginservice.submitLoginForm(this.customer)
   .subscribe(
     (customer) => {
       this.customer = customer;
+      console.log(customer);
     },
     (error) => {
       this.errMsg = error;
     }
   )
   this.applicationform.reset({
-    firstname: '',
-    lastname: '',
-    telnum: 0,
-    email: '',
-    agree: false,
-    contacttype:'None',
-    message: ''
+      f_name: '',
+      l_name: '',
+      m_name: '',
+      email: '',
+      age: 0,
+      occupation:'',
+      marital_status:'',
+      gender:'',
+      address:'',
+      pincode:0,
+      phone_number:0,
+      Present_member:0
   });
   this.applicationformDirective.resetForm();
 }
-
-
 }

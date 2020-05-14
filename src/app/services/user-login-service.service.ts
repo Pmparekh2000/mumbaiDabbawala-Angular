@@ -16,7 +16,7 @@ constructor(private http: HttpClient, private processHttpMsgService: ProcessHttp
       headers : new HttpHeaders(
         {'Content-Type': 'application/json'}
     )};
-        console.log(customer);
+        // console.log(customer);
     return this.http.post<Customer>(baseURL + 'customer',customer,httpOptions)
     .pipe(catchError(this.processHttpMsgService.handleErrors));
   }
