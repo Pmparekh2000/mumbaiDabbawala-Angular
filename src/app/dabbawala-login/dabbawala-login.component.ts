@@ -52,8 +52,8 @@ export class DabbawalaLoginComponent implements OnInit {
     },
     'phone_number':{
       'required' : 'Contact Number is Required',
-      'min': 'Invalid Phone Number',
-      'max': 'Invalid Phone Number'
+      'minlength': 'Invalid Phone Number',
+      'maxlength': 'Invalid Phone Number'
     },
     'address':{
       'required' : 'Address is Required',
@@ -79,7 +79,7 @@ export class DabbawalaLoginComponent implements OnInit {
       age: [,[Validators.required,Validators.min(5),Validators.max(100)]],
       gender:['',Validators.required],
       marital_status:['',Validators.required],
-      phone_number:[,[Validators.required,Validators.min(1000000000),Validators.max(9999999999)]],
+      phone_number:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
       address:['', [Validators.required,Validators.minLength(10), Validators.maxLength(199)]] 
     });
       this.tiffinman = this.applicationform.value;
@@ -112,6 +112,7 @@ onSubmit(){
 
   this.tiffinman = this.applicationform.value;
   // this.tiffinman.Present_member = this.tiffinman.Present_member ? 1 : 0;
+  console.log(this.tiffinman)
   this.tiffinmanservice.submitLoginForm(this.tiffinman)
   .subscribe(
     (tiffinman) => {
@@ -129,7 +130,7 @@ onSubmit(){
       age: 0,
       gender:'',
       marital_status:'',
-      phone_number:0
+      phone_number:''
   });
   this.applicationformDirective.resetForm();
 }

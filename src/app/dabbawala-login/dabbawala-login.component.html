@@ -53,7 +53,7 @@
 
             <div class="col-md-4 mb-3">
             <label for="validationTooltip05">Phone Number</label>
-            <input [ngClass]="{ 'is-invalid' : formErrors.phone_number !== ''}" type="number" formControlName="phone_number" class="form-control" id="validationTooltip05" placeholder="eg 7977820508" required>
+            <input [ngClass]="{ 'is-invalid' : formErrors.phone_number !== ''}" type="text" formControlName="phone_number" class="form-control" id="validationTooltip05" placeholder="eg 7977820508" required>
             <div class="invalid-feedback">
                 {{formErrors.phone_number}}
             </div>  
