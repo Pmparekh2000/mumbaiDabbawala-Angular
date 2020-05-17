@@ -11,12 +11,12 @@
         <div class="form-row">
           <div class="col-md-4 mb-3">
             <label for="f_name">First name</label>
-            <input type="text" [ngClass]="{ 'is-invalid' : formErrors.f_name !== ''}"  formControlName="f_name" class="form-control is-invalid" id="f_name" placeholder="Eg Robert" required>            
+            <input type="text" [ngClass]="{ 'is-invalid' : formErrors.f_name !== ''}"  formControlName="f_name" class="form-control is-invalid" id="f_name" placeholder="Eg Robert" required>
             <div class="invalid-feedback">
                 {{formErrors.f_name}}
             </div>
             </div>
-          
+
           <div class="col-md-4 mb-3">
             <label for="m_name">Father's name</label>
             <input type="text" [ngClass]="{ 'is-invalid' : formErrors.m_name !== ''}" formControlName="m_name" class="form-control" id="m_name" placeholder="Eg Robert" required>
@@ -34,7 +34,7 @@
         </div>
 
         <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-2">
                 <label for="inputState">Marital Status</label>
                 <select id="inputState"  formControlName="marital_status" class="form-control">
                   <option selected>married</option>
@@ -51,17 +51,23 @@
             </div>
             </div>
 
-            <div class="col-md-4 mb-3">
+            <div class="col-md-3 mb-3">
             <label for="validationTooltip05">Phone Number</label>
             <input [ngClass]="{ 'is-invalid' : formErrors.phone_number !== ''}" type="text" formControlName="phone_number" class="form-control" id="validationTooltip05" placeholder="eg 7977820508" required>
             <div class="invalid-feedback">
                 {{formErrors.phone_number}}
-            </div>  
             </div>
-
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationTooltip03">Password</label>
+              <input [ngClass]="{ 'is-invalid' : formErrors.password !== ''}" type="password" formControlName="password" class="form-control" id="password" required>
+              <div class="invalid-feedback">
+                  {{formErrors.password}}
+              </div>
+          </div>
           <div class="form-group col-md-3">
-            <label for="inputState">Gender</label>
-            <select formControlName="gender" id="inputState" class="form-control">
+            <label for="gender">Gender</label>
+            <select formControlName="gender" id="gender" class="form-control">
               <option selected>Male</option>
               <option>Female</option>
               <option>Trans Gender</option>

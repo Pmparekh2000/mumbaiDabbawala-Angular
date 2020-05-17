@@ -17,6 +17,7 @@ export class UserLoginComponent implements OnInit {
     'l_name': '',
     'm_name': '',
     'email':'',
+    'password':'',
     'age':'',
     'occupation':'',
     'marital_status':'',
@@ -25,7 +26,7 @@ export class UserLoginComponent implements OnInit {
     'pincode':'',
     'phone_number':''
   }
- 
+
   validationMessages = {
     'f_name': {
       'required':      'First Name is required.',
@@ -42,10 +43,15 @@ export class UserLoginComponent implements OnInit {
       'minlength':     "Father's Name must be at least 2 characters long.",
       'maxlength':     "Father's Name cannot be more than 20 characters long."
     },
+
     'email': {
       'required':      'Email is required.',
       'maxlength':     'Last Name cannot be more than 199 characters long.',
       'email':         'Email not in valid format.'
+    },
+    'password': {
+      'required':      "Passsword is required.",
+      'minlength':     "Password must be at least 10 characters long."
     },
     'age': {
       'required' : 'Age is required.',
@@ -93,6 +99,7 @@ export class UserLoginComponent implements OnInit {
       l_name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
       m_name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
       email: ['',[Validators.required,Validators.maxLength(199), Validators.email]],
+      password:['',[Validators.required,Validators.minLength(10)]],
       age: [,[Validators.required,Validators.min(5),Validators.max(100)]],
       occupation:['',Validators.maxLength(99)],
       marital_status:['',Validators.required],
@@ -100,11 +107,11 @@ export class UserLoginComponent implements OnInit {
       address:['', [Validators.required,Validators.minLength(10), Validators.maxLength(199)]],
       pincode:[,[Validators.required,,Validators.minLength(6),Validators.maxLength(6)]],
       phone_number:[,[Validators.required,Validators.min(1000000000),Validators.max(9999999999)]],
-      Present_member:false 
+      Present_member:false
     });
       this.customer = this.applicationform.value;
       this.applicationform.valueChanges.subscribe(data => this.onValueChanged());
-      this.onValueChanged(); // reset Validation Changes 
+      this.onValueChanged(); // reset Validation Changes
 }
 
 onValueChanged(data?: any) {
@@ -146,6 +153,7 @@ onSubmit(){
       l_name: '',
       m_name: '',
       email: '',
+      password:'',
       age: 0,
       occupation:'',
       marital_status:'',

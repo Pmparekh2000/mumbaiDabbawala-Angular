@@ -18,6 +18,7 @@ export class DabbawalaLoginComponent implements OnInit {
     'l_name': '',
     'age':'',
     'gender':'',
+    'password':'',
     'marital_status':'',
     'phone_number':'',
     'address':''
@@ -50,6 +51,10 @@ export class DabbawalaLoginComponent implements OnInit {
     'gender':{
       'required' : 'Gender is Required'
     },
+    'password': {
+      'required':      "Passsword is required.",
+      'minlength':     "Password must be at least 10 characters long."
+    },
     'phone_number':{
       'required' : 'Contact Number is Required',
       'minlength': 'Invalid Phone Number',
@@ -70,7 +75,7 @@ export class DabbawalaLoginComponent implements OnInit {
     }
 
   ngOnInit():void {}
-  
+
   createForm(){
     this.applicationform = this.fb.group({
       f_name: ['',[ Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
@@ -78,13 +83,14 @@ export class DabbawalaLoginComponent implements OnInit {
       m_name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
       age: [,[Validators.required,Validators.min(5),Validators.max(100)]],
       gender:['',Validators.required],
+      password:['',[Validators.required,Validators.minLength(10)]],
       marital_status:['',Validators.required],
       phone_number:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
-      address:['', [Validators.required,Validators.minLength(10), Validators.maxLength(199)]] 
+      address:['', [Validators.required,Validators.minLength(10), Validators.maxLength(199)]]
     });
       this.tiffinman = this.applicationform.value;
       this.applicationform.valueChanges.subscribe(data => this.onValueChanged());
-      this.onValueChanged(); // reset Validation Changes 
+      this.onValueChanged(); // reset Validation Changes
 }
 
 onValueChanged(data?: any) {
@@ -129,6 +135,7 @@ onSubmit(){
       l_name: '',
       age: 0,
       gender:'',
+      password:'',
       marital_status:'',
       phone_number:''
   });

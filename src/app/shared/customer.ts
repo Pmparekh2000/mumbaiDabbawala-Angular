@@ -3,6 +3,7 @@ export class Customer{
     l_name: string;
     m_name:string;
     email:string;
+    password:string;
     age:number;
     occupation:string;
     marital_status:string;
@@ -11,4 +12,4 @@ export class Customer{
     pincode:number;
     phone_number:number;
     Present_member:number;
-};  
+};

@@ -4,6 +4,7 @@ export class Tiffinman{
     l_name:string;
     age:number;
     gender:string;
+    password:string;
     marital_status:string;
     phone_number:string;
     address:string;
