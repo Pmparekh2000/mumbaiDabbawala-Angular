@@ -1,17 +1,18 @@
 <div class="jumbotron jumbotron-fluid mt-5">
     <div class="container">
       <h1 class="display-4"><strong>Dabbavala Applictaion Form</strong></h1>
-      <p class="lead">This Form is to apply for Job in our firm</p>
+      <p class="lead"><b>This Form is to apply for Job in our firm</b></p>
     </div>
 </div>
-<!-- <p>{{applicationform.value | json }}</p>
+<!-- <p>{{applicationform.value | json}}</p>
 <p> {{formErrors |json}}</p> -->
-<div #tiffinmanLoginForm class='container pt-4 pb-4'>
+
+<div #tiffinmanLoginForm class='container pt-4 pb-4 jumbotron mb-5'>
     <form [formGroup]="applicationform" (ngSubmit)="onSubmit()" #apform="ngForm" novalidate>
         <div class="form-row">
           <div class="col-md-4 mb-3">
             <label for="f_name">First name</label>
-            <input type="text" [ngClass]="{ 'is-invalid' : formErrors.f_name !== ''}"  formControlName="f_name" class="form-control is-invalid" id="f_name" placeholder="Eg Robert" required>
+            <input type="text" [ngClass]="{ 'is-invalid' : formErrors.f_name !== ''}"  formControlName="f_name" class="form-control" id="f_name" placeholder="Eg Robert" required>
             <div class="invalid-feedback">
                 {{formErrors.f_name}}
             </div>

@@ -5,14 +5,17 @@ import { Customer } from '../shared/customer';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { ProcessHttpMsgServiceService } from './process-http-msg-service.service';
 import { baseURL } from '../shared/baseUrl';
-// import { Service } from '../shared/servicedb';
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserLoginServiceService {
 
+  private customer : Customer;
 
-constructor(private http: HttpClient, private processHttpMsgService: ProcessHttpMsgServiceService) { }
+  constructor(private http: HttpClient, private processHttpMsgService: ProcessHttpMsgServiceService) { }
+
   submitLoginForm(customer:Customer): Observable<Customer>{
     const httpOptions = {
       headers : new HttpHeaders(

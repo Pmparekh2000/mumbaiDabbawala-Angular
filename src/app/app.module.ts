@@ -8,28 +8,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 //Components
-import { DonateComponent } from './donate/donate.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { UserLoginComponent } from './user-login/user-login.component';
-import { DabbawalaLoginComponent } from './dabbawala-login/dabbawala-login.component';
-
 //Services
 import { ProcessHttpMsgServiceService } from './services/process-http-msg-service.service';
 import { UserLoginServiceService } from './services/user-login-service.service';
-
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    DonateComponent,
-    PageNotFoundComponent,
     NavbarComponent,
-    FooterComponent,
-    UserLoginComponent,
-    DabbawalaLoginComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

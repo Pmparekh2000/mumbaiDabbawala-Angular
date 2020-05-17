@@ -1,0 +1,63 @@
+<div class="jumbotron jumbotron-fluid mt-5">
+  <div class="container">
+    <h1 class="display-2"><strong>Login Page</strong></h1>
+    <p class="lead"><b>The best of Us is Yet to come</b></p>
+  </div>
+</div>
+<div class="container pb-5 mt-5">
+  <div class="row">
+
+  <!-- <div class="col-sm-6">
+    <div class="card jumbotron">
+      <div class="card-body">
+        <h5 class="card-title"><b>Customer Login</b></h5>
+        <form novalidate [formGroup]="customerLoginForm" (ngSubmit)="onCustomerSubmit()" #customerlogin="ngForm">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" [ngClass]="{ 'is-invalid' : customerformErrors.email !== ''}" class="form-control" id="exampleInputEmail1"  formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <div class="invalid-feedback">
+              {{customerformErrors.email}}
+          </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" [ngClass]="{ 'is-invalid' : true}" class="form-control" formControlName="password1" id="exampleInputPassword1" placeholder="Password">
+            <div class="invalid-feedback">
+              {{customerformErrors.password1}}
+          </div>
+          </div>
+          <button [disabled]="customerlogin.form.invalid" type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div> -->
+  <!-- {{tiffinmanformErrors | json}} -->
+
+  <div class="col-sm-6">
+    <div class="card jumbotron">
+      <div class="card-body">
+        <h5 class="card-title"><b>Tiffinman Login</b></h5>
+        <form  novalidate [formGroup]="tiffinmanloginformgroup" (ngSubmit)="onTiffinmanSubmit()" #tiffinmanlogin="ngForm">
+          <div class="form-group">
+            <label for="exampleInputEmail2">Phone Number</label>
+            <input type="text" [ngClass]="{ 'is-invalid' : tiffinmanformErrors.phone_number !== ''}"  formControlName="phone_number" class="form-control" id="exampleInputEmail2" placeholder="Enter Phone number">
+            <div class="invalid-feedback">
+              {{tiffinmanformErrors.phone_number}}
+          </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword2">Password</label>
+            <input type="password" [ngClass]="{ 'is-invalid' : tiffinmanformErrors.password !== ''}" formControlName="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+            <div class="invalid-feedback">
+              {{tiffinmanformErrors.password}}
+          </div>
+          </div>
+          <button [disabled]="tiffinmanlogin.form.invalid" type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Convert phone number to text -->

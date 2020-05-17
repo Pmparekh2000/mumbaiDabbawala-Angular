@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
-.display-4{
+.display-2{
   font-family: 'Spicy Rice', cursive;
 }
 label{
   font-family: 'Spicy Rice', cursive;
-  font-size: large;
  }
+.card-title{
+  font-family: 'Spicy Rice', cursive;
+  font-size: xx-large;
+}

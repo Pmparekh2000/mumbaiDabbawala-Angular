@@ -1,0 +1,17 @@
+<div class="container mt-5 text-center pt-5">
+  <!-- {{Customers | json}} -->
+  <h1 class="display-3"><b>List of Customers</b></h1>
+  <div *ngFor="let customer of Customers" class="offset-2 col-8 p-4 text-center">
+    <div class="card-header">
+      <b>Drive Safe </b>
+    </div>
+    <div class=" card-body">
+      <h5 class="card-title">{{customer.f_name +" "+customer.l_name}}</h5>
+      <p class="card-text">Phone number: {{customer.phone_number}}</p>
+      <p class="card-text">Address: {{customer.address}}</p>
+    </div>
+    <div class="card-footer">
+      <b>M u m b a i......D a b b a w a l a</b>
+    </div>
+  </div>
+</div>

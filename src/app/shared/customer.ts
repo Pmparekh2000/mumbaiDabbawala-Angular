@@ -10,6 +10,6 @@ export class Customer{
     gender:string;
     address:string;
     pincode:number;
-    phone_number:number;
+    phone_number:string;
     Present_member:number;
 };

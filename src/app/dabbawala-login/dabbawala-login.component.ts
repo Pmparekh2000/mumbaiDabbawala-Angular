@@ -120,15 +120,20 @@ onSubmit(){
   // this.tiffinman.Present_member = this.tiffinman.Present_member ? 1 : 0;
   console.log(this.tiffinman)
   this.tiffinmanservice.submitLoginForm(this.tiffinman)
-  .subscribe(
-    (tiffinman) => {
+  .subscribe({
+    next : (tiffinman) => {
       this.tiffinman = tiffinman;
       console.log(tiffinman);
     },
-    (error) => {
-      this.errMsg = error;
+    error: (error) => {
+      console.log(error);
+
+    },
+    complete:() =>
+    {
+      console.log('Subscriptionfinished')
     }
-  )
+  })
   this.applicationform.reset({
       f_name: '',
       m_name: '',

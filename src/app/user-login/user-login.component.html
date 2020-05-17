@@ -1,12 +1,12 @@
 <div class="jumbotron jumbotron-fluid mt-5">
     <div class="container">
       <h1 class="display-4"><strong>Service Application Form</strong></h1>
-      <p class="lead">This Form is to apply for the servicces given by us</p>
+      <p class="lead"><b>This Form is to apply for the servicces given by us</b></p>
     </div>
 </div>
 <!-- <p>{{applicationform.value | json }}</p>
 <p> {{formErrors |json}}</p> -->
-<div #UserLoginForm class='container pt-4 pb-4'>
+<div #UserLoginForm class='container jumbotron pt-4 pb-4'>
     <form [formGroup]="applicationform" (ngSubmit)="onSubmit()" #apform="ngForm" novalidate>
         <div class="form-row">
           <div class="col-md-4 mb-3">
