@@ -22,7 +22,7 @@ export class TiffinmanApplicationService {
   )};
 
   private Tiffinmandata:CustomerData[];
-  private exist:boolean = true;
+  private exist:boolean = false;
 
   submitLoginForm(tiffinman:Tiffinman): Observable<Tiffinman>{
 
@@ -46,9 +46,12 @@ export class TiffinmanApplicationService {
     }
   checkData(){
     return this.exist;
-
   }
   getData(){
     return this.Tiffinmandata;
+  }
+  logout(){
+    this.exist = false;
+    this.Tiffinmandata = null;
   }
 }

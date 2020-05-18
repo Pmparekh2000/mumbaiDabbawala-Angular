@@ -33,4 +33,8 @@ export class LoginTiffinmanComponent implements OnInit {
     }
   }
 
+  Logout(){
+    this.tiffinmanservice.logout()
+    this.router.navigate(['/login']);
+  }
 }
