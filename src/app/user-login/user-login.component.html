@@ -1,1 +1,123 @@
-<p>user-login works!</p>
+<div class="jumbotron jumbotron-fluid mt-5">
+    <div class="container">
+      <h1 class="display-4"><strong>Service Application Form</strong></h1>
+      <p class="lead"><b>This Form is to apply for the servicces given by us</b></p>
+    </div>
+</div>
+<!-- <p>{{applicationform.value | json }}</p>
+<p> {{formErrors |json}}</p> -->
+<div #UserLoginForm class='container jumbotron pt-4 pb-4'>
+    <form [formGroup]="applicationform" (ngSubmit)="onSubmit()" #apform="ngForm" novalidate>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="f_name">First name</label>
+            <input type="text" [ngClass]="{ 'is-invalid' : formErrors.f_name !== ''}"  formControlName="f_name" class="form-control is-invalid" id="f_name" placeholder="Eg Robert" required>
+            <div class="invalid-feedback">
+                {{formErrors.f_name}}
+            </div>
+            </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="m_name">Father's name</label>
+            <input type="text" [ngClass]="{ 'is-invalid' : formErrors.m_name !== ''}" formControlName="m_name" class="form-control" id="m_name" placeholder="Eg Robert" required>
+            <div class="invalid-feedback">
+                {{formErrors.m_name}}
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="l_name">Surname</label>
+            <input type="text" [ngClass]="{ 'is-invalid' : formErrors.l_name !== ''}" formControlName="l_name" class="form-control" id="l_name" placeholder="Eg Downey" required>
+            <div class="invalid-feedback">
+                {{formErrors.l_name}}
+            </div>
+        </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip03">Email Id</label>
+            <input [ngClass]="{ 'is-invalid' : formErrors.email !== ''}" type="text" formControlName="email" class="form-control" id="validationTooltip03" placeholder="eg robert3@gmail.com" required>
+            <div class="invalid-feedback">
+                {{formErrors.email}}
+            </div>
+        </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip03">Password</label>
+            <input [ngClass]="{ 'is-invalid' : formErrors.password !== ''}" type="password" formControlName="password" class="form-control" id="password" required>
+            <div class="invalid-feedback">
+                {{formErrors.password}}
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationTooltip05">Phone Number</label>
+          <input [ngClass]="{ 'is-invalid' : formErrors.phone_number !== ''}" type="number" formControlName="phone_number" class="form-control" id="validationTooltip05" placeholder="eg 7977820508" required>
+          <div class="invalid-feedback">
+              {{formErrors.phone_number}}
+          </div>
+      </div>
+
+          <div class="col-md-1 mb-3">
+            <label for="validationTooltip04">Age</label>
+            <input [ngClass]="{ 'is-invalid' : formErrors.age !== ''}" type="number" formControlName="age" class="form-control" id="validationTooltip04" required>
+            <div class="invalid-feedback">
+                {{formErrors.age}}
+            </div>
+        </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-3 col-lg-3 col-xl-3 mb-3">
+              <label for="validationTooltip01">Occupation</label>
+              <input [ngClass]="{ 'is-invalid' : formErrors.occupation !== ''}" type="text" formControlName="occupation" class="form-control" id="validationTooltip01">
+              <div class="invalid-feedback">
+                {{formErrors.occupation}}
+            </div>
+            </div>
+
+            <div class="col-md-3  col-lg-3 col-xl-3 mb-3 ">
+              <label for="validationTooltip02">ZIP code</label>
+              <input type="text" [ngClass]="{ 'is-invalid' : formErrors.pincode !== ''}" formControlName="pincode" class="form-control" id="validationTooltip02" required>
+              <div class="invalid-feedback">
+                {{formErrors.pincode}}
+            </div>
+            </div>
+
+            <div class="col-lg-3 col-xl-3 col-md-3 mb-3">
+                <label for="inputState">Marital Status</label>
+                <select id="inputState"  formControlName="marital_status" class="form-control">
+                  <option>married</option>
+                  <option selected>Unmarried</option>
+                  <option>Divorced</option>
+                  <option>Widow</option>
+                </select>
+              </div>
+
+
+          <div class=" col-lg-3 col-xl-3 col-md-3 mb-3">
+            <label for="gender">Gender</label>
+            <select formControlName="gender" id="gender" class="form-control">
+              <option selected>Male</option>
+              <option>Female</option>
+              <option>Trans Gender</option>
+            </select>
+          </div>
+        </div>
+          <div class="form-row">
+              <div class="form-group col-12 mb-3">
+                  <label for="">Address for the Delivery</label>
+                  <input [ngClass]="{ 'is-invalid' : formErrors.address !== ''}" class="form-control" formControlName="address" type="text" name="address" id="address">
+                <div class="invalid-feedback">
+                    {{formErrors.address}}
+                </div>
+                </div>
+          </div>
+
+          <div class="custom-control custom-checkbox p-3 ml-3">
+            <input formControlName="Present_member" type="checkbox" class="custom-control-input" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1">Do you want to start your dabba</label>
+          </div>
+
+        <button [disabled]="apform.form.invalid" class="btn btn-primary" type="submit">Submit form</button>
+      </form>
+</div>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DabbawalaRegisterComponent } from './dabbawala-register.component';
+import { LoginPageComponent } from './login-page.component';
 
-describe('DabbawalaRegisterComponent', () => {
-  let component: DabbawalaRegisterComponent;
-  let fixture: ComponentFixture<DabbawalaRegisterComponent>;
+describe('LoginPageComponent', () => {
+  let component: LoginPageComponent;
+  let fixture: ComponentFixture<LoginPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DabbawalaRegisterComponent ]
+      declarations: [ LoginPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DabbawalaRegisterComponent);
+    fixture = TestBed.createComponent(LoginPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

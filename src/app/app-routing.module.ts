@@ -6,26 +6,28 @@ import { TedTalksComponent } from './ted-talks/ted-talks.component';
 import { DabbaServiceComponent } from './dabba-service/dabba-service.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
-import { UserRegisterComponent } from './user-register/user-register.component';
 import { UserLoginComponent } from './user-login/user-login.component';
-import { DabbawalaRegisterComponent } from './dabbawala-register/dabbawala-register.component';
 import { DabbawalaLoginComponent } from './dabbawala-login/dabbawala-login.component';
 import { NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { LoginCustomerComponent } from './login-customer/login-customer.component';
+import { LoginTiffinmanComponent } from './login-tiffinman/login-tiffinman.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'/home', pathMatch:'full'},
   {path: 'dabbawala-login',component: DabbawalaLoginComponent},
-  {path: 'dabbawala-register',component: DabbawalaRegisterComponent},
   {path: 'user-login',component: UserLoginComponent},
-  {path: 'user-register',component: UserRegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'about-us', component:AboutUsComponent},
   {path: 'dabba-service', component:DabbaServiceComponent},
   {path: 'ted-talks', component:TedTalksComponent},
   {path: 'digital-dabbawala', component:DigitalDabbawalaComponent},
   {path: 'certificates', component:CertificatesComponent},
+  {path: 'login', component:LoginPageComponent},
+  {path: 'customer', component:LoginCustomerComponent},
+  {path: 'tiffinman', component:LoginTiffinmanComponent},
   {path: 'images-and-videos', component:ImagesAndVideosComponent},
   {path: 'centralised-kitchen', component:CentralisedKitchenComponent},
   {path: '**',component:PageNotFoundComponent}// This page not found has to be at the last of the list of path as the components are read sequentially
@@ -36,6 +38,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [DabbawalaLoginComponent, DabbawalaRegisterComponent, UserLoginComponent, UserRegisterComponent, HomeComponent,
-   AboutUsComponent, DabbaServiceComponent, TedTalksComponent, DigitalDabbawalaComponent, CertificatesComponent, ImagesAndVideosComponent,PageNotFoundComponent,
-  CentralisedKitchenComponent];
+export const routingComponents = [DabbawalaLoginComponent, UserLoginComponent, HomeComponent,
+   AboutUsComponent, DabbaServiceComponent, TedTalksComponent, DigitalDabbawalaComponent, CertificatesComponent,
+    ImagesAndVideosComponent,PageNotFoundComponent,CentralisedKitchenComponent,LoginCustomerComponent
+    ,LoginPageComponent,LoginTiffinmanComponent];

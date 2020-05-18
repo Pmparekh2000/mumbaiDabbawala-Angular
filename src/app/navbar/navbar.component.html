@@ -1,87 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Website for the mumbai Tiffinvalas">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  
-</head>
-<body>
-  <!-- <div  class="container">
-    <div class="row top">
-      <div class="col-sm align-text">
-        <img src="../assets/logo_dabbawala.png" class="img-thumbnail" style="width: 250px; height: 70px;">
-      </div>
-      <div class="col-sm">
-        Phone no - +91 98704 19916 
-      </div>
-      <div class="col-sm">
-        Email - info@mumbaidabbawala.in
-      </div>
-    </div>
-  </div> -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="navbar-brand"><i>Mumbai Tiffinvala</i></div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active nav">
-          <a class="nav-link" routerLink="/home"><strong>Home</strong><span class="sr-only">(current)</span></a>
+        <li class="nav-item nav">
+          <a class="nav-link active" routerLink="/home"><strong>Home</strong><span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active nav">
+        <li class="nav-item nav">
           <a class="nav-link" routerLink="/about-us"><strong>About Us</strong><span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active dropdown nav">
+        <li class="nav-item dropdown nav">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <strong>Our Services</strong>
           </a>
           <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item animated zoomIn" routerLink = "dabba-service"><strong>Dabba Service</strong></a>
             <a class="dropdown-item animated zoomIn" routerLink = "ted-talks"><strong>Lectures/Seminars and Ted Talks</strong></a>
-            <a class="dropdown-item animated zoomIn" routerLink = "digital-dabbawala"><strong>Digital Dabbawala</strong></a>
-            <a class="dropdown-item animated zoomIn" href="#"><strong>Advertise with us</strong></a>
+            <a class="dropdown-item animated zoomIn" routerLink = "digital-dabbawala" ><strong>Digital Dabbawala</strong></a>
+            <!-- <a class="dropdown-item animated zoomIn" href="#"><strong>Advertise with us</strong></a> -->
             <a class="dropdown-item animated zoomIn" routerLink = "centralised-kitchen"><strong>Centralised Kitchen</strong></a>
           </div>
         </li>
-        <li class="nav-item active nav">
+        <!-- <li class="nav-item  nav">
           <a class="nav-link" href="#"><strong>Our Work</strong><span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active dropdown nav">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <strong>Transformational</strong>
+        </li> -->
+        <li class="nav-item nav">
+          <a class="nav-link" routerLink="certificates"id="navbarDropdown" role="button">
+            <strong>Certification and Licensing</strong>
           </a>
-          <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item animated zoomIn" href="#"><strong>Graduate Hires</strong></a>
-            <a class="dropdown-item animated zoomIn" routerLink = "certificates"><strong>Certification and Licensing</strong></a>
-            <a class="dropdown-item animated zoomIn" href="#"><strong>Start up initiation</strong></a>
-            <a class="dropdown-item animated zoomIn" href="#"><strong>Training</strong></a>
-          </div>
+          <!-- <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown"> -->
+            <!-- <a class="dropdown-item animated zoomIn" href="#"><strong>Graduate Hires</strong></a> -->
+            <!-- <a class="dropdown-item animated zoomIn" ><strong>Certification and Licensing</strong></a> -->
+            <!-- <a class="dropdown-item animated zoomIn" href="#"><strong>Start up initiation</strong></a> -->
+            <!-- <a class="dropdown-item animated zoomIn" href="#"><strong>Training</strong></a> -->
+          <!-- </div> -->
         </li>
-        <li class="nav-item active dropdown nav">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item nav">
+          <a class="nav-link" routerLink="images-and-videos" role="button">
             <strong>Media</strong>
           </a>
-          <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item animated zoomIn" routerLink="images-and-videos"><strong>Image and Video Gallery</strong></a>
-          </div>
+          <!-- <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item animated zoomIn" ><strong>Image and Video Gallery</strong></a>
+          </div> -->
         </li>
-        <li class="nav-item active nav">
+        <li class="nav-item nav">
           <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal" data-toggle="modal" data-target="#exampleModal"><strong>Donate Us</strong><span class="sr-only">(current)</span></a>
         </li>
       </ul>
-      <li class="nav-item active dropdown nav">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <strong>Login and Registeration</strong>
+      <li class="nav-item dropdown nav text-white pr-5">
+        <a class="nav-link dropdown-toggle nav-item" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <strong>Apply Now</strong>
         </a>
         <div class="dropdown-menu drop-down-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item animated zoomIn" routerLink="/user-login"><strong>User Login</strong></a>
-          <a class="dropdown-item animated zoomIn" routerLink="/user-register"><strong>User Register</strong></a>
-          <a class="dropdown-item animated zoomIn" routerLink="/dabbawala-login"><strong>Dabbawala Login</strong></a>
-          <a class="dropdown-item animated zoomIn" routerLink="/dabbawala-register"><strong>Dabbawala Register</strong></a>
+          <a class="dropdown-item animated zoomIn" routerLink="user-login"><strong>Customer Application</strong></a>
+          <a class="dropdown-item animated zoomIn" routerLink="dabbawala-login"><strong>Job Application</strong></a>
+          <a class="dropdown-item animated zoomIn" routerLink="login"><strong>Login</strong></a>
         </div>
       </li>
     </div>
@@ -160,5 +136,3 @@
       </div>
     </div>
   </div>
-</body>
-</html>
