@@ -9,7 +9,7 @@ export class Customer{
     marital_status:string;
     gender:string;
     address:string;
-    pincode:number;
+    pincode:string;
     phone_number:string;
     Present_member:number;
 };

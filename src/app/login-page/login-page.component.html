@@ -4,14 +4,18 @@
     <p class="lead"><b>The best of Us is Yet to come</b></p>
   </div>
 </div>
+
 <div class="container pb-5 mt-5">
   <div class="row">
 
-  <!-- <div class="col-sm-6">
+  <div class="col-sm-6">
+    <!-- {{customerformErrors | json}} -->
+    <!-- {{customerloginformgroup.value | json}} -->
+
     <div class="card jumbotron">
       <div class="card-body">
         <h5 class="card-title"><b>Customer Login</b></h5>
-        <form novalidate [formGroup]="customerLoginForm" (ngSubmit)="onCustomerSubmit()" #customerlogin="ngForm">
+        <form novalidate [formGroup]="customerloginformgroup" (ngSubmit)="onCustomerSubmit()" #customerlogin="ngForm">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" [ngClass]="{ 'is-invalid' : customerformErrors.email !== ''}" class="form-control" id="exampleInputEmail1"  formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
@@ -21,19 +25,21 @@
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" [ngClass]="{ 'is-invalid' : true}" class="form-control" formControlName="password1" id="exampleInputPassword1" placeholder="Password">
+            <input type="password" [ngClass]="{  'is-invalid' : customerformErrors.password !== ''}" class="form-control" formControlName="password" id="exampleInputPassword1" placeholder="Password">
             <div class="invalid-feedback">
-              {{customerformErrors.password1}}
+              {{customerformErrors.password}}
           </div>
           </div>
           <button [disabled]="customerlogin.form.invalid" type="submit" class="btn btn-primary">Login</button>
         </form>
+        {{customererrMsg}}
       </div>
     </div>
-  </div> -->
-  <!-- {{tiffinmanformErrors | json}} -->
+  </div>
 
   <div class="col-sm-6">
+    <!-- {{tiffinmanformErrors | json}} -->
+    <!-- {{tiffinmanloginformgroup.value | json}} -->
     <div class="card jumbotron">
       <div class="card-body">
         <h5 class="card-title"><b>Tiffinman Login</b></h5>
@@ -54,6 +60,7 @@
           </div>
           <button [disabled]="tiffinmanlogin.form.invalid" type="submit" class="btn btn-primary">L o g i n</button>
         </form>
+        {{tiffinmanerrMsg}}
       </div>
     </div>
   </div>

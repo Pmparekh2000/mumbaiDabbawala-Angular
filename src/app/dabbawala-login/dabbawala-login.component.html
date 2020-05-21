@@ -87,5 +87,8 @@
                 </div>
           </div>
         <button [disabled]="apform.form.invalid" class="btn btn-primary" type="submit">Submit form</button>
+        <p class="text-danger">
+          {{errMsg}}
+        </p>
       </form>
 </div>

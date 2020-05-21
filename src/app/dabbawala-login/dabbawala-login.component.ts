@@ -27,17 +27,17 @@ export class DabbawalaLoginComponent implements OnInit {
   validationMessages = {
     'f_name': {
       'required':      'First Name is required.',
-      'minlength':     'First Name must be at least 2 characters long.',
+      'minlength':     'First Name must be at least 3 characters long.',
       'maxlength':     'First Name cannot be more than 20 characters long.'
     },
     'm_name': {
       'required':      "Father's Name is required.",
-      'minlength':     "Father's Name must be at least 2 characters long.",
+      'minlength':     "Father's Name must be at least 3 characters long.",
       'maxlength':     "Father's Name cannot be more than 20 characters long."
     },
     'l_name': {
       'required':      'Last Name is required.',
-      'minlength':     'Last Name must be at least 2 characters long.',
+      'minlength':     'Last Name must be at least 3 characters long.',
       'maxlength':     'Last Name cannot be more than 20 characters long.'
     },
     'age': {
@@ -78,9 +78,9 @@ export class DabbawalaLoginComponent implements OnInit {
 
   createForm(){
     this.applicationform = this.fb.group({
-      f_name: ['',[ Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
-      l_name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
-      m_name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
+      f_name: ['',[ Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
+      l_name: ['',[Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
+      m_name: ['',[Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
       age: [,[Validators.required,Validators.min(5),Validators.max(100)]],
       gender:['',Validators.required],
       password:['',[Validators.required,Validators.minLength(10)]],
@@ -127,7 +127,7 @@ onSubmit(){
     },
     error: (error) => {
       console.log(error);
-
+      // this.errMsg =  error;
     },
     complete:() =>
     {

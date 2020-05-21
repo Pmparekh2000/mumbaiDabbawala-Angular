@@ -12,6 +12,7 @@ export class UserLoginComponent implements OnInit {
   customer: Customer;
   applicationform: FormGroup;
   errMsg: string;
+
   formErrors= {
     'f_name':'',
     'l_name': '',
@@ -46,7 +47,7 @@ export class UserLoginComponent implements OnInit {
 
     'email': {
       'required':      'Email is required.',
-      'maxlength':     'Last Name cannot be more than 199 characters long.',
+      'maxlength':     'Email cannot be more than 199 characters long.',
       'email':         'Email not in valid format.'
     },
     'password': {
@@ -143,6 +144,7 @@ onSubmit(){
     (customer) => {
       this.customer = customer;
       console.log(customer);
+      
     },
     (error) => {
       this.errMsg = error;

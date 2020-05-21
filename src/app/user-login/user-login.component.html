@@ -117,7 +117,10 @@
             <input formControlName="Present_member" type="checkbox" class="custom-control-input" id="customCheck1">
             <label class="custom-control-label" for="customCheck1">Do you want to start your dabba</label>
           </div>
-
-        <button [disabled]="apform.form.invalid" class="btn btn-primary" type="submit">Submit form</button>
+          <button [disabled]="apform.form.invalid" class="btn btn-primary" type="submit">Submit form</button>
+          
+        <div class="text-danger">
+          {{errMsg}}
+        </div>
       </form>
 </div>

@@ -28,9 +28,6 @@ export class LoginTiffinmanComponent implements OnInit {
    }
 
   ngOnInit() {
-    if(!this.tiffinmanservice.checkData()){
-      console.log(this.tiffinmanservice.checkData())
-    }
   }
 
   Logout(){
